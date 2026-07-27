@@ -1,0 +1,29 @@
+# 构建产物
+/build/
+/app/build/
+.gradle/
+/local.properties
+
+# IDE
+.idea/
+*.iml
+.vscode/
+*.swp
+*.swo
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# 内置工具（体积太大，不提交）
+/tools/gradle-*/
+/sdk/
+/tools/*.zip
+/tools/download_jdk.ps1
+
+# APK 输出
+*.apk
+*.aab
+
+# 日志
+*.log
