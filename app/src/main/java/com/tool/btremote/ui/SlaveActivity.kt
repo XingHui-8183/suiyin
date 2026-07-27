@@ -52,6 +52,7 @@ class SlaveActivity : AppCompatActivity() {
         setupMediaControls()
         setupSwitches()
         setupSettings()
+        setupAbout()
 
         CoreService.start(this)
         keepAliveManager = KeepAliveManager(this)
@@ -196,6 +197,20 @@ class SlaveActivity : AppCompatActivity() {
 
         binding.btnHotspotDiagnose.setOnClickListener {
             showHotspotDiagnosis()
+        }
+    }
+
+    private fun setupAbout() {
+        val versionName = try {
+            packageManager.getPackageInfo(packageName, 0).versionName
+        } catch (e: Exception) {
+            "1.0"
+        }
+        binding.tvVersionName.text = versionName
+
+        binding.tvGithubLink.setOnClickListener {
+            val uri = android.net.Uri.parse("https://github.com/XingHui-8183/suiyin-")
+            startActivity(android.content.Intent(android.content.Intent.ACTION_VIEW, uri))
         }
     }
 
