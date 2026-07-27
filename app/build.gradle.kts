@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.tool.btremote"
+    namespace = "cn.org.sdcd.suiyin"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.tool.btremote"
+        applicationId = "cn.org.sdcd.suiyin"
         minSdk = 26
         targetSdk = 34
         versionCode = 1
